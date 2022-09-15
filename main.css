@@ -26,89 +26,101 @@ p {
     padding-top: 60px;
     padding-bottom: 108px;
 }
-.section +.section {
-    margin-top: 90px;
+.section-card {
+    padding-top: 60px;
+    padding-bottom: 90px;
 }
 .container {
     width: 1140px;
     padding: 0 15px;
     margin: 0 auto;
 }
-.card-current {
+.section-card__inner {
     display: flex;
     justify-content: space-between;
 }
-.card-current__wrapper-img {
-    margin-top: 28px;
+.section-card__img {
+    padding-top: 28px;
     width: 540px;
 }
-.card-current__content {
+.section-card__content {
     width: 540px;
 }
-.card-current__wrapper-header {
+.section-card__title {
     margin-bottom: 20px;
 }
-.card-current__header {
+.main-title {
     font-weight: 700;
     font-size: 28px;
     line-height: 1;
 }
-.card-current__price {
+.section-card__price {
+    margin-bottom: 32px;
     font-weight: 600;
     font-size: 24px;
+    line-height: 1.2;
     color: #7E9BBD;
-    margin-bottom: 32px;
 }
-.card-current__price--currency {
+.section-card__price span {
     font-size: 16px;
 }
-.card-current__wrapper-link {
+.section-card__link {
     margin-bottom: 40px;
 }
-.card-current__link-basket {
-    display: inline-block;
+.button-link {
     height: 46px;
-    padding: 0 20px;
-    line-height: 46px;
-    background: #000000;
+    display: inline-block;
+    padding: 0 17px;
+    line-height: 40px;
     border-radius: 6px;
-
-    font-weight: 700;
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(126, 155, 189, 0.3);
+    font-weight: 600;
     font-size: 16px;
-    color: #FFFFFF;
     text-decoration: none;
+    color: #7E9BBD;
 }
-.card-current__description {
+.button-link--black {
+    padding: 0 20px;
+    font-weight: 700;
+    line-height: 46px;
+    color: #FFFFFF;
+    border: none;
+    background: #000000;
+}
+.section-card__description {
     padding-right: 5px;
     font-family: 'Playfair Display', serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.7;
 }
-.card-current__description p:not(:last-child){
+.section-card__description p:not(:last-child){
     margin-bottom: 15px;
 }
-.card-current__link-details {
+.section-card__details {
     text-decoration: underline;
     cursor: pointer;
 }
-.section__header-wrapper {
+.section-cards {
+    padding-bottom: 108px;
+}
+.section-cards__title {
     text-align: center;
     margin-bottom: 46px;
 }
-.section__header {
+.other-title {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     font-size: 28px;
     line-height: 1.3;
 }
-.section__cards {
+.section-cards__inner {
     display: flex;
     column-gap: 30px;
 }
 .card {
     width: 350px;
-    height: 410px;
     padding: 30px 30px 23px;
     background: #FFFFFF;
     box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
@@ -116,14 +128,16 @@ p {
 .card__img {
     margin-bottom: 20px;
 }
-.card__wrapper-title {
-    margin-bottom: 10px;
-    height: 48px;
-}
 .card__title {
+    height: 48px;
+    margin-bottom: 10px;
     font-weight: 600;
     font-size: 20px;
     line-height: 1.2;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .card__details {
     display: flex;
